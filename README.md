@@ -1,4 +1,7 @@
 # Orthogroup Sequence Grabber
+This repository hosts the updated version of the Orthogroup Sequence Grabber, developed initially for the Klebsormidiophyceae phylogenomic study. As the tool has grown and gained more features over time, I've decided to maintain each tool for the PhyloRSeq++ pipeline in its own dedicated GitHub repository for clarity and modularity.
+
+Orthogroup Sequence Grabber is very easy to use, you can either run it directly on the command line or by editing the script OSG.sh
 This step is also very simple again. Just edit the [OSG.sh](https://github.com/mjbieren/Phylogenomics_klebsormidiophyceae/blob/main/Scripts/10_OrthogroupSequenceGrabber_OSG/OSG_Gandalf.sh) file and run it (Change lines 4 to 15).
 This tool can run with just 1 CPU, and output files can not be bigger than 1 GB of RAM. It can run on any 64-bit machine on the front end and is super fast. 5% of the time is the calculations/parsing of the input files and 95% is writing them to the output folder. Which is heavily depending on the speed of your disks and/or your network speed.
 
@@ -49,8 +52,8 @@ Command line options:
 				Not setting it will result in the same fasta headers as the fasta files use.
 -s <SummaryPath>		Set the path to where the user wants to write the Summary: NOT REQUIRED. 
 				Not setting it will result in no summary file: NOT REQUIRED.
--x        This ignores samples that are not within the taxonomic group file: NOT REQUIRED.
--c        Combine all the HOGS into their OGs
+-x				This ignores samples that are not within the taxonomic group file: NOT REQUIRED.
+-c				Combine all the HOGS into their OGs
 ```
 
 ### Summary File
