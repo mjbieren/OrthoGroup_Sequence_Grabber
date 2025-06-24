@@ -47,7 +47,7 @@ Each of these Orthogroups was written into a Fasta File.
 
 ```
 
-## OSG (Orthogroup Sequence Grabber)
+## OSG (Orthogroup Sequence Grabber) Sources
 This tool is created with the Boost library (v1.88). It is developed in Visual Studio 2019 with the GCC compiler (For remote Linux).  I've compiled two different (static) executables (they are portable!) under Debian 12 ([OSG_Debian.out]([https://github.com/mjbieren/Phylogenomics_klebsormidiophyceae/tree/main/Executables/OSG](https://github.com/mjbieren/OrthoGroup_Sequence_Grabber/tree/main/Executables))), and Rocky Linux 8, which is based on Linux Red Hat.
 
 Either make your own executable with the corresponding source files or use one of the already existing executables.
