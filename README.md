@@ -1,4 +1,4 @@
-# Orthogroup Sequence Grabber
+# OrthoGroup Sequence Grabber
 This repository hosts the updated version of the Orthogroup Sequence Grabber, developed initially for the Klebsormidiophyceae phylogenomic study. As the tool has grown and gained more features over time, I've decided to maintain each tool for the PhyloRSeq++ pipeline in its own dedicated GitHub repository for clarity and modularity.
 
 Orthogroup Sequence Grabber is very easy to use, you can either run it directly on the command line or by editing the script OSG.sh
@@ -10,7 +10,7 @@ If you require the size of the output files to change please contact me at maaik
 
 
 Basically, this tool interprets Orthofinder's tsv files under "Phylogenetic_Hierarchical_Orthogroups" and parses the Orthogroups in fasta objects, by obtaining the fasta blocks from the original fasta files (Orthofinder input folder). 
-It is however recomended to only use the N0.tsv file (aka copy the N0.tsv file into its own directory and use that as an input.
+It is, however, recommended only to use the N0.tsv file (aka copy the N0.tsv file into its own directory and use that as an input.
 It then filters this result based on the users' taxonomic group file and the threshold given by the user. This means that if you have a taxonomic group filter threshold of 2. You need at least 2 species of different taxonomic groups. Not two species of the same taxonomic group. See the folder [TaxonomicGroupFiles](https://github.com/mjbieren/Phylogenomics_klebsormidiophyceae/tree/main/Scripts/10_OrthogroupSequenceGrabber_OSG/TaxonomicGroupFiles) for examples.
 Basically, the Taxonomic Group file is formatted like this:
 ```
@@ -19,16 +19,23 @@ SpeciesName3(HeaderName),SpeciesName4(HeaderName)
 ```
 Each line represents a taxonomic group, and species are separated by a ",".
 
-##Visualisation
-If the user have
+## Visualisation
+Based on the user-defined threshold, the program analyzes the various HOG TSV files. It filters out any orthogroups containing fewer than three sequences, as it's not possible to construct a phylogenetic tree with only one or two sequences.
+Next, filtering is applied based on the taxonomic group threshold. In the example below, a threshold of 4 is used, meaning that an orthogroup must include sequences from at least four different taxonomic groups to be retained.
 
+As illustrated in the image, an orthogroup with four sequences (indicated by green arrows) is excluded because those sequences do not represent four distinct taxonomic groups. Therefore, this orthogroup does not meet the threshold and is filtered out.
+![alt text](https://github.com/mjbieren/OrthoGroup_Sequence_Grabber/blob/main/Sources/Images/OSG_Bad.PNG?raw=True "BAD_Filter")
 
+In contrast, the image below shows an orthogroup with four sequences (indicated by green arrows), each representing a different taxonomic group. Since it meets the threshold, this orthogroup will be included in the creation of a FASTA files.
+![alt text](https://github.com/mjbieren/OrthoGroup_Sequence_Grabber/blob/main/Sources/Images/OSG_Good.PNG?raw=True "GOOD_Filter")
 
-It will then create the fasta output files (which can be quite large depending on the filtering).
+The program then generates the corresponding FASTA output files, the number can become quite large depending on the filtering criteria used. This process is illustrated in the image below.
+![alt text](https://github.com/mjbieren/OrthoGroup_Sequence_Grabber/blob/main/Sources/Images/OSG_Filtered.PNG?raw=True "Filtered")
+
 Finally a summary file is created if the user wishes so.
 
 ## OSG (Orthogroup Sequence Grabber)
-This tool is created with the boost library (v1.78). And is developed in Visual Studio 2019 with the GCC compiler (For remote Linux).  I've compiled 3 different executables (they are portable!) under Debian 10 but also work and tested on Debian 11 ([OSG_Debian.out](https://github.com/mjbieren/Phylogenomics_klebsormidiophyceae/tree/main/Executables/OSG)), Scientific Linux 7, which is based on Red Hat ([OSG_HPC.out](https://github.com/mjbieren/Phylogenomics_klebsormidiophyceae/tree/main/Executables/OSG)), and Arch Linux, which is still in beta ([OSG_Arch.out](https://github.com/mjbieren/Phylogenomics_klebsormidiophyceae/tree/main/Executables/OSG)).
+This tool is created with the Boost library (v1.88). It is developed in Visual Studio 2019 with the GCC compiler (For remote Linux).  I've compiled two different (static) executables (they are portable!) under Debian 12 ([OSG_Debian.out]([https://github.com/mjbieren/Phylogenomics_klebsormidiophyceae/tree/main/Executables/OSG](https://github.com/mjbieren/OrthoGroup_Sequence_Grabber/tree/main/Executables))), and Rocky Linux 8, which is based on Linux Red Hat.
 
 Either make your own executable with the corresponding source files or use one of the already existing executables.
 
@@ -57,7 +64,7 @@ Command line options:
 ```
 
 ### Summary File
-You have the option to create a summary file which gives you an overview of what OSG did. Example output:
+You have the option to create a summary file, which gives you an overview of what OSG did. Example output:
 
 ```
 There were a total of 60931 OrthoGroups from the OrthoFinder Output, which was based on 126 taxa 
