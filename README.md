@@ -34,6 +34,19 @@ The program then generates the corresponding FASTA output files, the number can 
 
 Finally a summary file is created if the user wishes so.
 
+### The Summary File
+You have the option to create a summary file, which gives you an overview of what OSG did. Example output:
+
+```
+There were a total of 60931 OrthoGroups from the OrthoFinder Output, which was based on 126 taxa 
+The Taxonomic Group file contained a total of 4 Taxonomic Groups
+The User defined 2 as a Threshold, meaning 2/4 Taxonomic Groups had to be present for each OrthoGroup.
+From the total of 60931 Orthogroups, 47522 were filtered out, resulting in 13409 Orthogroups, containing at least 2 Taxonomic Groups.
+
+Each of these Orthogroups was written into a Fasta File.
+
+```
+
 ## OSG (Orthogroup Sequence Grabber)
 This tool is created with the Boost library (v1.88). It is developed in Visual Studio 2019 with the GCC compiler (For remote Linux).  I've compiled two different (static) executables (they are portable!) under Debian 12 ([OSG_Debian.out]([https://github.com/mjbieren/Phylogenomics_klebsormidiophyceae/tree/main/Executables/OSG](https://github.com/mjbieren/OrthoGroup_Sequence_Grabber/tree/main/Executables))), and Rocky Linux 8, which is based on Linux Red Hat.
 
@@ -61,17 +74,4 @@ Command line options:
 				Not setting it will result in no summary file: NOT REQUIRED.
 -x				This ignores samples that are not within the taxonomic group file: NOT REQUIRED.
 -c				Combine all the HOGS into their OGs
-```
-
-### Summary File
-You have the option to create a summary file, which gives you an overview of what OSG did. Example output:
-
-```
-There were a total of 60931 OrthoGroups from the OrthoFinder Output, which was based on 126 taxa 
-The Taxonomic Group file contained a total of 4 Taxonomic Groups
-The User defined 2 as a Threshold, meaning 2/4 Taxonomic Groups had to be present for each OrthoGroup.
-From the total of 60931 Orthogroups, 47522 were filtered out, resulting in 13409 Orthogroups, containing at least 2 Taxonomic Groups.
-
-Each of these Orthogroups was written into a Fasta File.
-
 ```
