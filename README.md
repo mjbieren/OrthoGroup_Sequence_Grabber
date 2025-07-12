@@ -11,7 +11,7 @@ If you require the size of the output files to change please contact me at maaik
 
 Basically, this tool interprets Orthofinder's tsv files under "Phylogenetic_Hierarchical_Orthogroups" and parses the Orthogroups in fasta objects, by obtaining the fasta blocks from the original fasta files (Orthofinder input folder). 
 It is, however, recommended only to use the N0.tsv file (aka copy the N0.tsv file into its own directory and use that as an input.
-It then filters this result based on the users' taxonomic group file and the threshold given by the user. This means that if you have a taxonomic group filter threshold of 2. You need at least 2 species of different taxonomic groups. Not two species of the same taxonomic group. See the folder [TaxonomicGroupFiles](https://github.com/mjbieren/Phylogenomics_klebsormidiophyceae/tree/main/Scripts/10_OrthogroupSequenceGrabber_OSG/TaxonomicGroupFiles) for examples.
+It then filters this result based on the users' taxonomic group file and the threshold given by the user. This means that if you have a taxonomic group filter threshold of 2. You need at least 2 species of different taxonomic groups. Not two species of the same taxonomic group. See the folder [TaxonomicGroupFiles](https://github.com/mjbieren/OrthoGroup_Sequence_Grabber/upload/main/TaxonomicGroupFiles) for examples.
 Basically, the Taxonomic Group file is formatted like this:
 ```
 SpeciesName1(HeaderName),Speciesname2(HeaderName)
