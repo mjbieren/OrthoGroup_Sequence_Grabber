@@ -1,0 +1,14 @@
+Umutabilis(Umutabilis),Creinhardtii(Creinhardtii),Csubellipsoidea(Csubellipsoidea),Cvulgaris(Cvulgaris)
+Catmophyticus(Catmophyticus),Mviride(Mviride)
+Knitens(Knitens),
+Cbraunii(Cbraunii),Nmirabilis(Nmirabilis),
+ACOI-737(ACOI-737),SAG_26.98(SAG_26.98),ACOI-2467(ACOI-2467),Helsinki(Helsinki),
+UTEX_2790(UTEX_2790),
+SAG_32.97(SAG_32.97),
+NIES-3719(NIES-3719),SAG_3.91(SAG_3.91),UTEX_1291(UTEX_1291),
+LB422(LB422),SAG_N2022.005(SAG_N2022.005),
+ACOI-1602(ACOI-1602),ACOI-1849(ACOI-1849),ACOI-45(ACOI-45),NIES-4262(NIES-4262),SAG_110.80(SAG_110.80),SAG_3.90(SAG_3.90),SAG_50.90(SAG_50.90),UTEX_2567(UTEX_2567),UTEX_2784(UTEX_2784),UTEX_610(UTEX_610),
+ACOI-2634(ACOI-2634),ACOI-2635(ACOI-2635),ACOI-2636(ACOI-2636),UTEX_2785(UTEX_2785),SAG_N2022.004(SAG_N2022.004),
+Mendlicherianum(Mendlicherianum),Zcircumcarinatum(Zcircumcarinatum),Mougeotiasp(Mougeotiasp),Smuscicola(Smuscicola),Spratensis(Spratensis),
+Ppatens(Ppatens),Aagrestis_OXF(Aagrestis_OXF),Aagrestis_BONN(Aagrestis_BONN),Mpolymorpha(Mpolymorpha),
+Itaiwanensis(Itaiwanensis),Afiliculoides(Afiliculoides),Bdistachyon(Bdistachyon),Athaliana(Athaliana),
