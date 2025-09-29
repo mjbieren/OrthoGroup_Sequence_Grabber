@@ -19,6 +19,9 @@ SpeciesName3(HeaderName),SpeciesName4(HeaderName)
 ```
 Each line represents a taxonomic group, and species are separated by a ",".
 
+>[!NOTE]
+>From OrthoFinder v3.1.0, N0.tsv is removed from /Phylogenetic_Hierarchical_Orthogroups. Instead, Orthogroups/Orthogroups.tsv contains the orthogroups from N0.tsv.
+
 ## Visualisation
 Based on the user-defined threshold, the program analyzes the various HOG TSV files. It filters out any orthogroups containing fewer than three sequences, as it's not possible to construct a phylogenetic tree with only one or two sequences.
 Next, filtering is applied based on the taxonomic group threshold. In the example below, a threshold of 4 is used, meaning that an orthogroup must include sequences from at least four different taxonomic groups to be retained.
